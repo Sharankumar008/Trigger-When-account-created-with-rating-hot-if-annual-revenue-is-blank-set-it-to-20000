@@ -1,0 +1,13 @@
+//when account created with rating hot,if annual revenue is blank set it to 20000
+
+trigger AccountTrigger on Account (before insert) {
+    switch on Trigger.OperationType{
+        when BEFORE_INSERT{         
+            for(Account acc:Trigger.new){
+                if(acc.Rating=='Hot'&& acc.AnnualRevenue==NULL){
+                    acc.AnnualRevenue=20000;
+                }
+            }
+        }
+    }
+}
