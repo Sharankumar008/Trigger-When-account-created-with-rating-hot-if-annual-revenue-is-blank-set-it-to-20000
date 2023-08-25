@@ -1,0 +1,1 @@
+# Trigger-When-account-created-with-rating-hot-if-annual-revenue-is-blank-set-it-to-20000
